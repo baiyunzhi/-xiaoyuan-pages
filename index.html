@@ -40,6 +40,7 @@
 
     a { color: inherit; }
     button { font: inherit; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .shell { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
     .nav {
       min-height: 72px;
@@ -90,6 +91,56 @@
     .metric span { color: var(--muted); font-size: 13px; }
     .good { color: var(--teal); }
     .warn { color: var(--amber); }
+
+    .market-summary { display: grid; grid-template-columns: 1.15fr .85fr; gap: 14px; margin-bottom: 14px; }
+    .market-callout { padding: 24px; }
+    .market-callout-label { color: var(--teal); font-size: 12px; letter-spacing: .12em; }
+    .market-callout h3 { margin: 8px 0 4px; font-size: 25px; font-weight: 600; }
+    .market-callout p { margin: 0; color: var(--muted); }
+    .market-guide { padding: 20px 24px; display: grid; gap: 10px; }
+    .guide-row { display: grid; grid-template-columns: 23px 1fr; gap: 9px; color: #c9d3d8; font-size: 13px; }
+    .guide-row b { color: var(--teal); font-weight: 600; }
+    .market-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 18px; border-bottom: 1px solid var(--line); }
+    .filter-group { display: flex; gap: 7px; flex-wrap: wrap; }
+    .filter-button {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      color: var(--muted);
+      background: transparent;
+      cursor: pointer;
+    }
+    .filter-button[aria-pressed="true"] { border-color: var(--teal); color: var(--text); background: var(--teal-soft); }
+    .market-search {
+      width: min(230px, 100%);
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--text);
+      background: var(--surface-2);
+      outline: none;
+    }
+    .market-search:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+    .product-table-wrap { overflow-x: auto; }
+    .product-table { width: 100%; min-width: 820px; border-collapse: collapse; }
+    .product-table th, .product-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; }
+    .product-table th { color: var(--muted); font-size: 12px; font-weight: 500; }
+    .product-table td { color: #cbd5da; }
+    .product-table tbody tr:last-child td { border-bottom: 0; }
+    .product-name { display: flex; align-items: center; gap: 10px; }
+    .product-code { min-width: 36px; color: var(--text); font-weight: 600; }
+    .product-name small { display: block; color: var(--muted); font-size: 11px; }
+    .pool-badge { display: inline-flex; padding: 4px 8px; border-radius: 99px; color: var(--muted); background: rgba(146,163,173,.1); font-size: 12px; }
+    .pool-badge.watch { color: var(--amber); background: var(--amber-soft); }
+    .pool-badge.focus { color: var(--teal); background: var(--teal-soft); }
+    .pool-badge.unavailable { color: var(--red); background: var(--red-soft); }
+    .pool-reason { display: block; max-width: 150px; margin-top: 4px; color: var(--muted); font-size: 11px; }
+    .dimensions { display: flex; gap: 5px; }
+    .dimension { padding: 3px 6px; border-radius: 5px; color: #71828d; background: rgba(113,130,141,.08); font-size: 11px; }
+    .dimension.active { color: var(--teal); background: var(--teal-soft); }
+    .attention { font-variant-numeric: tabular-nums; color: var(--text); }
+    .table-message { padding: 30px; color: var(--muted); text-align: center; }
+    .market-footnote { padding: 11px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 
     section { padding: 34px 0 48px; }
     .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
@@ -174,7 +225,7 @@
     footer a { color: var(--teal); text-decoration: none; }
 
     @media (max-width: 850px) {
-      .hero, .fold-layout, .decision { grid-template-columns: 1fr; }
+      .hero, .fold-layout, .decision, .market-summary { grid-template-columns: 1fr; }
       .hero { gap: 24px; padding-top: 52px; }
       .metrics, .stability-grid { grid-template-columns: repeat(2, 1fr); }
       .folds { border-right: 0; border-bottom: 1px solid var(--line); }
@@ -188,6 +239,8 @@
       .fold-grid { grid-template-columns: repeat(3, 1fr); }
       .folds, .fold-detail, .ablation, .decision { padding: 18px; }
       .section-head, footer { align-items: start; flex-direction: column; }
+      .market-toolbar { align-items: stretch; flex-direction: column; }
+      .market-search { width: 100%; }
       .ablation-row { grid-template-columns: 1fr 52px; gap: 5px 10px; }
       .ablation-track { grid-column: 1 / -1; grid-row: 2; }
       .ablation-row b { grid-column: 2; grid-row: 1; }
@@ -220,6 +273,43 @@
       <div class="metric"><strong>1,351</strong><span>交易日 · 2021—2026</span></div>
       <div class="metric"><strong class="good">0</strong><span>前视输入违规</span></div>
     </div>
+
+    <section aria-labelledby="market-title">
+      <div class="section-head">
+        <div><h2 id="market-title">最新品种状态</h2><div class="section-kicker" id="marketDate">正在读取最新公开筛选快照…</div></div>
+        <div class="tag" id="marketCount">37 个品种</div>
+      </div>
+      <div class="market-summary">
+        <div class="panel market-callout">
+          <div class="market-callout-label">今天先看这里</div>
+          <h3 id="marketHeadline">载入中</h3>
+          <p id="marketSummaryText">页面将把观察池排在最前；关注池为空时不会强行给出交易方向。</p>
+        </div>
+        <div class="panel market-guide" aria-label="阅读方法">
+          <div class="guide-row"><b>1</b><span>先看“状态”：关注池 ＞ 观察池 ＞ 未触发。</span></div>
+          <div class="guide-row"><b>2</b><span>再看“三维”：持仓、成交、波动点亮越多，市场活动越同步。</span></div>
+          <div class="guide-row"><b>3</b><span>最后看“结构”：它描述位置，不直接代表做多或做空。</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="market-toolbar">
+          <div class="filter-group" aria-label="筛选品种状态">
+            <button class="filter-button" type="button" data-market-filter="all" aria-pressed="true">全部</button>
+            <button class="filter-button" type="button" data-market-filter="watch" aria-pressed="false">观察池</button>
+            <button class="filter-button" type="button" data-market-filter="focus" aria-pressed="false">关注池</button>
+            <button class="filter-button" type="button" data-market-filter="active" aria-pressed="false">至少两维活跃</button>
+          </div>
+          <label><span class="sr-only">搜索品种</span><input class="market-search" id="marketSearch" type="search" placeholder="搜索品种、代码或板块"></label>
+        </div>
+        <div class="product-table-wrap">
+          <table class="product-table">
+            <thead><tr><th>品种 / 合约</th><th>板块</th><th>当前状态</th><th>三维活跃</th><th>市场结构</th><th>关注度</th></tr></thead>
+            <tbody id="productRows"><tr><td colspan="6" class="table-message">正在载入品种状态…</td></tr></tbody>
+          </table>
+        </div>
+        <div class="market-footnote" id="marketFootnote">公开页仅展示筛选派生状态，不包含原始行情。</div>
+      </div>
+    </section>
 
     <section aria-labelledby="rolling-title">
       <div class="section-head">
@@ -317,6 +407,119 @@
   </footer>
 
   <script>
+    const marketLabels = {
+      pool: {focus:'关注池', watch:'观察池', neutral:'未触发', unavailable:'不可用'},
+      structure: {consolidation:'整理', trend:'趋势', transition:'转换', unclear:'模糊', unknown:'未知'},
+      stage: {early:'早期', middle:'中期', late:'末期', unclear:'', unknown:''}
+    };
+    let publicProducts = [];
+    let marketFilter = 'all';
+
+    function addCell(row, text, className = '') {
+      const cell = document.createElement('td');
+      if (className) cell.className = className;
+      cell.textContent = text;
+      row.appendChild(cell);
+      return cell;
+    }
+
+    function renderProducts() {
+      const rows = document.getElementById('productRows');
+      const query = document.getElementById('marketSearch').value.trim().toLowerCase();
+      const visible = publicProducts.filter(product => {
+        const filterMatch = marketFilter === 'all' || product.pool === marketFilter ||
+          (marketFilter === 'active' && product.active_dimensions >= 2);
+        const text = `${product.prefix} ${product.name} ${product.symbol} ${product.sector}`.toLowerCase();
+        return filterMatch && (!query || text.includes(query));
+      });
+      rows.replaceChildren();
+      if (!visible.length) {
+        const row = document.createElement('tr');
+        addCell(row, '当前筛选条件下没有品种。', 'table-message').colSpan = 6;
+        rows.appendChild(row);
+        return;
+      }
+      visible.forEach(product => {
+        const row = document.createElement('tr');
+        const nameCell = document.createElement('td');
+        const nameWrap = document.createElement('div');
+        nameWrap.className = 'product-name';
+        const code = document.createElement('span');
+        code.className = 'product-code';
+        code.textContent = product.prefix;
+        const name = document.createElement('span');
+        name.textContent = product.name;
+        const symbol = document.createElement('small');
+        symbol.textContent = product.symbol;
+        name.appendChild(symbol);
+        nameWrap.append(code, name);
+        nameCell.appendChild(nameWrap);
+        row.appendChild(nameCell);
+        addCell(row, product.sector);
+        const poolCell = document.createElement('td');
+        const badge = document.createElement('span');
+        badge.className = `pool-badge ${product.pool}`;
+        badge.textContent = marketLabels.pool[product.pool] || product.pool;
+        poolCell.appendChild(badge);
+        if (product.availability_reason) {
+          const reason = document.createElement('small');
+          reason.className = 'pool-reason';
+          reason.textContent = product.availability_reason;
+          poolCell.appendChild(reason);
+        }
+        row.appendChild(poolCell);
+        const dimensionCell = document.createElement('td');
+        const dimensions = document.createElement('div');
+        dimensions.className = 'dimensions';
+        [['open_interest','持仓'],['volume','成交'],['volatility','波动']].forEach(([key,label]) => {
+          const item = document.createElement('span');
+          const active = Boolean(product.dimensions[key]?.active);
+          item.className = `dimension${active ? ' active' : ''}`;
+          item.textContent = `${label}${active ? '✓' : '–'}`;
+          dimensions.appendChild(item);
+        });
+        dimensionCell.appendChild(dimensions);
+        row.appendChild(dimensionCell);
+        const state = marketLabels.structure[product.structure.state] || product.structure.state;
+        const stage = marketLabels.stage[product.structure.stage] || product.structure.stage;
+        addCell(row, `${state}${stage}`);
+        addCell(row, product.attention_score == null ? '—' : product.attention_score.toFixed(2), 'attention');
+        rows.appendChild(row);
+      });
+      document.getElementById('marketFootnote').textContent = `当前显示 ${visible.length} / ${publicProducts.length} 个品种。公开页仅展示筛选派生状态，不包含原始行情。`;
+    }
+
+    async function loadMarketState() {
+      try {
+        const response = await fetch('market-state.json', {cache:'no-store'});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        publicProducts = Array.isArray(data.products) ? data.products : [];
+        document.getElementById('marketDate').textContent = `不可变真实合约快照 · 行情日 ${data.as_of}`;
+        document.getElementById('marketCount').textContent = `${data.summary.products} 个品种`;
+        const watchNames = publicProducts.filter(item => item.pool === 'watch').map(item => `${item.prefix} ${item.name}`);
+        const focusNames = publicProducts.filter(item => item.pool === 'focus').map(item => `${item.prefix} ${item.name}`);
+        document.getElementById('marketHeadline').textContent = focusNames.length ? `关注池：${focusNames.join('、')}` :
+          watchNames.length ? `观察池：${watchNames.join('、')}` : '今天没有触发观察品种';
+        document.getElementById('marketSummaryText').textContent = `关注池 ${data.summary.focus} 个，观察池 ${data.summary.watch} 个；其余品种仍可在下表查看三维状态与结构。`;
+        renderProducts();
+      } catch (error) {
+        document.getElementById('marketHeadline').textContent = '品种状态暂时不可用';
+        document.getElementById('marketSummaryText').textContent = '公开筛选快照读取失败，请稍后刷新。';
+        document.getElementById('productRows').innerHTML = '<tr><td colspan="6" class="table-message">品种状态读取失败。</td></tr>';
+      }
+    }
+
+    document.querySelectorAll('[data-market-filter]').forEach(button => {
+      button.addEventListener('click', () => {
+        marketFilter = button.dataset.marketFilter;
+        document.querySelectorAll('[data-market-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        renderProducts();
+      });
+    });
+    document.getElementById('marketSearch').addEventListener('input', renderProducts);
+    loadMarketState();
+
     const folds = [
       {n:1,start:'2023-06-29',end:'2023-09-20',score:55,dims:2,events:23,pass:false,abs:.5080,atr:1.0219,vol:.9488},
       {n:2,start:'2023-09-21',end:'2023-12-21',score:66,dims:2,events:30,pass:false,abs:.6953,atr:.8548,vol:.9139},

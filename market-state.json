@@ -1,0 +1,1347 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-07-31",
+  "data_mode": "immutable_actual_contract_snapshot",
+  "decision": "observe_only",
+  "summary": {
+    "products": 37,
+    "watch": 1,
+    "focus": 0,
+    "unavailable": 6
+  },
+  "products": [
+    {
+      "prefix": "CU",
+      "name": "沪铜",
+      "symbol": "CU2609",
+      "sector": "有色",
+      "pool": "watch",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 2,
+      "attention_score": 44.44,
+      "final_score": 13.33,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": true,
+          "percentile": 0.8588
+        },
+        "volume": {
+          "available": true,
+          "active": true,
+          "percentile": 0.8529
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2647
+        }
+      }
+    },
+    {
+      "prefix": "AG",
+      "name": "白银",
+      "symbol": "AG2610",
+      "sector": "贵金属",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 22.22,
+      "final_score": 4.44,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": true,
+          "percentile": 0.7857
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5065
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1299
+        }
+      }
+    },
+    {
+      "prefix": "M",
+      "name": "豆粕",
+      "symbol": "M2609",
+      "sector": "油脂农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 22.22,
+      "final_score": 4.44,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1579
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3158
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.883
+        }
+      }
+    },
+    {
+      "prefix": "RM",
+      "name": "菜粕",
+      "symbol": "RM609",
+      "sector": "油脂农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 22.22,
+      "final_score": 4.44,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2047
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.8655
+        }
+      }
+    },
+    {
+      "prefix": "RB",
+      "name": "螺纹钢",
+      "symbol": "RB2610",
+      "sector": "黑色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 11.11,
+      "final_score": 8.89,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1688
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2403
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.7338
+        }
+      }
+    },
+    {
+      "prefix": "V",
+      "name": "PVC",
+      "symbol": "V2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 11.11,
+      "final_score": 2.22,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1754
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.6023
+        }
+      }
+    },
+    {
+      "prefix": "Y",
+      "name": "豆油",
+      "symbol": "Y2701",
+      "sector": "油脂农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 11.11,
+      "final_score": 2.22,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2247
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.7303
+        }
+      }
+    },
+    {
+      "prefix": "ZN",
+      "name": "沪锌",
+      "symbol": "ZN2609",
+      "sector": "有色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 1,
+      "attention_score": 11.11,
+      "final_score": 11.11,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "late",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": true,
+          "percentile": 0.6118
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5412
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1529
+        }
+      }
+    },
+    {
+      "prefix": "AL",
+      "name": "沪铝",
+      "symbol": "AL2609",
+      "sector": "有色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "late",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1294
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4059
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1588
+        }
+      }
+    },
+    {
+      "prefix": "AP",
+      "name": "苹果",
+      "symbol": "AP610",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1946
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1007
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.255
+        }
+      }
+    },
+    {
+      "prefix": "BU",
+      "name": "沥青",
+      "symbol": "BU2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.12
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.256
+        }
+      }
+    },
+    {
+      "prefix": "C",
+      "name": "玉米",
+      "symbol": "C2609",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2515
+        }
+      }
+    },
+    {
+      "prefix": "CF",
+      "name": "棉花",
+      "symbol": "CF609",
+      "sector": "软商品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1287
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4503
+        }
+      }
+    },
+    {
+      "prefix": "CS",
+      "name": "淀粉",
+      "symbol": "CS2609",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        }
+      }
+    },
+    {
+      "prefix": "EG",
+      "name": "乙二醇",
+      "symbol": "EG2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1975
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2963
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3457
+        }
+      }
+    },
+    {
+      "prefix": "FU",
+      "name": "燃料油",
+      "symbol": "FU2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0552
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4972
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3812
+        }
+      }
+    },
+    {
+      "prefix": "HC",
+      "name": "热卷",
+      "symbol": "HC2610",
+      "sector": "黑色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1364
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2273
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5909
+        }
+      }
+    },
+    {
+      "prefix": "I",
+      "name": "铁矿石",
+      "symbol": "I2609",
+      "sector": "黑色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0058
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4561
+        }
+      }
+    },
+    {
+      "prefix": "J",
+      "name": "焦炭",
+      "symbol": "J2609",
+      "sector": "黑色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0351
+        }
+      }
+    },
+    {
+      "prefix": "JD",
+      "name": "鸡蛋",
+      "symbol": "JD2609",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3025
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5741
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5123
+        }
+      }
+    },
+    {
+      "prefix": "JM",
+      "name": "焦煤",
+      "symbol": "JM2609",
+      "sector": "黑色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0585
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0585
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1345
+        }
+      }
+    },
+    {
+      "prefix": "L",
+      "name": "塑料",
+      "symbol": "L2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2924
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4503
+        }
+      }
+    },
+    {
+      "prefix": "LH",
+      "name": "生猪",
+      "symbol": "LH2611",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.128
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.48
+        }
+      }
+    },
+    {
+      "prefix": "MA",
+      "name": "甲醇",
+      "symbol": "MA609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1287
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3216
+        }
+      }
+    },
+    {
+      "prefix": "NI",
+      "name": "沪镍",
+      "symbol": "NI2609",
+      "sector": "有色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1412
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4941
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4706
+        }
+      }
+    },
+    {
+      "prefix": "OI",
+      "name": "菜油",
+      "symbol": "OI609",
+      "sector": "油脂农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "up"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.117
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1053
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2398
+        }
+      }
+    },
+    {
+      "prefix": "P",
+      "name": "棕榈油",
+      "symbol": "P2609",
+      "sector": "油脂农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2164
+        }
+      }
+    },
+    {
+      "prefix": "PP",
+      "name": "聚丙烯",
+      "symbol": "PP2609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0351
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2632
+        }
+      }
+    },
+    {
+      "prefix": "SN",
+      "name": "沪锡",
+      "symbol": "SN2609",
+      "sector": "有色",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "late",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4294
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4706
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1412
+        }
+      }
+    },
+    {
+      "prefix": "SR",
+      "name": "白糖",
+      "symbol": "SR609",
+      "sector": "软商品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1345
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3392
+        }
+      }
+    },
+    {
+      "prefix": "TA",
+      "name": "PTA",
+      "symbol": "TA609",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "whitelist_passed": true,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0468
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0175
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2222
+        }
+      }
+    },
+    {
+      "prefix": "AU",
+      "name": "黄金",
+      "symbol": "AU2610",
+      "sector": "贵金属",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 2,
+      "attention_score": 55.56,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": true,
+          "percentile": 1.0
+        },
+        "volume": {
+          "available": true,
+          "active": true,
+          "percentile": 0.8882
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1647
+        }
+      }
+    },
+    {
+      "prefix": "SC",
+      "name": "原油",
+      "symbol": "SC2609",
+      "sector": "能源化工",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 2,
+      "attention_score": 44.44,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.564
+        },
+        "volume": {
+          "available": true,
+          "active": true,
+          "percentile": 0.976
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.712
+        }
+      }
+    },
+    {
+      "prefix": "IC",
+      "name": "中证500",
+      "symbol": "IC2609",
+      "sector": "股指",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 1,
+      "attention_score": 33.33,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.427
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5056
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 0.9775
+        }
+      }
+    },
+    {
+      "prefix": "IM",
+      "name": "中证1000",
+      "symbol": "IM2609",
+      "sector": "股指",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 1,
+      "attention_score": 33.33,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "transition",
+        "stage": "unclear",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.4157
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.5169
+        },
+        "volatility": {
+          "available": true,
+          "active": true,
+          "percentile": 1.0
+        }
+      }
+    },
+    {
+      "prefix": "IF",
+      "name": "沪深300",
+      "symbol": "IF2609",
+      "sector": "股指",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.1798
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.2809
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3596
+        }
+      }
+    },
+    {
+      "prefix": "IH",
+      "name": "上证50",
+      "symbol": "IH2609",
+      "sector": "股指",
+      "pool": "unavailable",
+      "availability_reason": "一手保证金占比超过默认上限",
+      "whitelist_passed": false,
+      "active_dimensions": 0,
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "energy_signal": false,
+      "sector_resonant": false,
+      "structure": {
+        "state": "consolidation",
+        "stage": "middle",
+        "direction": "down"
+      },
+      "dimensions": {
+        "open_interest": {
+          "available": true,
+          "active": false,
+          "percentile": 0.0
+        },
+        "volume": {
+          "available": true,
+          "active": false,
+          "percentile": 0.3708
+        },
+        "volatility": {
+          "available": true,
+          "active": false,
+          "percentile": 0.382
+        }
+      }
+    }
+  ],
+  "notice": "仅含筛选派生状态，不含原始行情、账户数据或交易指令。"
+}
