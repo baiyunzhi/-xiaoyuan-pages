@@ -1,0 +1,17 @@
+name: Validate public market screener
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "15 14 * * 1-5"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/validate_public_snapshot.py market-state.json
