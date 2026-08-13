@@ -8,6 +8,7 @@ import sys
 
 FORBIDDEN = {"raw_bars", "bars", "open", "high", "low", "close", "settle", "volume", "oi", "open_interest", "member_position", "positions", "price", "lower", "upper", "change", "change_pct"}
 SCHEMA = "xiaoyuan.market_screener.v3"
+SCHEMA_VERSION = "3.0"
 MIN_AVAILABLE = 34
 
 
@@ -24,6 +25,7 @@ def keys(value):
 def validate(path: Path, *, check_age: bool = True) -> dict:
     data = json.loads(path.read_text(encoding="utf-8"))
     assert data.get("schema") == SCHEMA
+    assert data.get("schema_version") == SCHEMA_VERSION
     assert data.get("closed_only") is True
     products = data.get("products")
     assert isinstance(products, list) and len(products) == 37
