@@ -21,13 +21,22 @@ def keys(value):
 
 def validate(path: Path, *, check_age: bool = True) -> dict:
     data = json.loads(path.read_text(encoding="utf-8"))
-    assert data.get("schema") == "xiaoyuan.market_screener.v2"
+    assert data.get("schema") == "xiaoyuan.market_screener.v3"
     assert data.get("closed_only") is True
     products = data.get("products")
     assert isinstance(products, list) and len(products) == 37
     prefixes = [row.get("prefix") for row in products]
     assert len(set(prefixes)) == 37
     assert data.get("summary", {}).get("products") == 37
+    assert data.get("summary", {}).get("available", 0) >= 34
+    assert data.get("identity_mode") in {
+        "current_contract_refresh", "reuse_last_confirmed", "unknown"
+    }
+    for row in products:
+        assert isinstance(row.get("active_factors"), list)
+        assert row.get("active_dimensions", 0) == len(row["active_factors"])
+        assert isinstance(row.get("reason_text"), str) and row["reason_text"].strip()
+        assert isinstance(row.get("next_checks"), list) and row["next_checks"]
     assert not FORBIDDEN.intersection(keys(data))
     generated = datetime.fromisoformat(data["generated_at"])
     if generated.tzinfo is None:
