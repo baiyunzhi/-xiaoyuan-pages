@@ -7,6 +7,8 @@ import sys
 
 
 FORBIDDEN = {"raw_bars", "bars", "open", "high", "low", "close", "settle", "volume", "oi", "open_interest", "member_position", "positions", "price", "lower", "upper", "change", "change_pct"}
+SCHEMA = "xiaoyuan.market_screener.v3"
+MIN_AVAILABLE = 34
 
 
 def keys(value):
@@ -21,13 +23,23 @@ def keys(value):
 
 def validate(path: Path, *, check_age: bool = True) -> dict:
     data = json.loads(path.read_text(encoding="utf-8"))
-    assert data.get("schema") == "xiaoyuan.market_screener.v2"
+    assert data.get("schema") == SCHEMA
     assert data.get("closed_only") is True
     products = data.get("products")
     assert isinstance(products, list) and len(products) == 37
     prefixes = [row.get("prefix") for row in products]
     assert len(set(prefixes)) == 37
     assert data.get("summary", {}).get("products") == 37
+    assert data.get("summary", {}).get("available", 0) >= MIN_AVAILABLE
+    assert data.get("identity_mode") in {
+        "current_contract_refresh", "reuse_last_confirmed", "unknown"
+    }
+    for row in products:
+        factors = row.get("active_factors")
+        assert isinstance(factors, list)
+        assert row.get("active_dimensions", 0) == len(factors)
+        assert isinstance(row.get("reason_text"), str) and row["reason_text"].strip()
+        assert isinstance(row.get("next_checks"), list) and row["next_checks"]
     assert not FORBIDDEN.intersection(keys(data))
     generated = datetime.fromisoformat(data["generated_at"])
     if generated.tzinfo is None:
