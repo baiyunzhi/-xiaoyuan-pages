@@ -1,8 +1,8 @@
 {
   "schema": "xiaoyuan.market_screener.v3",
   "schema_version": "3.0",
-  "generated_at": "2026-08-14T22:11:13+08:00",
-  "last_success_at": "2026-08-14T22:11:13+08:00",
+  "generated_at": "2026-08-14T23:58:17+08:00",
+  "last_success_at": "2026-08-14T23:58:17+08:00",
   "as_of": "2026-08-14",
   "expected_as_of": "2026-08-14",
   "closed_only": true,
@@ -20,29 +20,11 @@
     "unavailable": 0
   },
   "changes": {
-    "entered_watch": [
-      "AL",
-      "C",
-      "JM",
-      "P"
-    ],
-    "left_watch": [
-      "I",
-      "OI",
-      "RM",
-      "ZN"
-    ],
-    "entered_focus": [
-      "IM",
-      "OI",
-      "RM"
-    ],
-    "left_focus": [
-      "C",
-      "CU",
-      "J"
-    ],
-    "previous_as_of": "2026-08-13"
+    "entered_watch": [],
+    "left_watch": [],
+    "entered_focus": [],
+    "left_focus": [],
+    "previous_as_of": "2026-08-14"
   },
   "products": [
     {
@@ -121,7 +103,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=AL0",
       "structure": {
         "state": "trend",
@@ -299,7 +281,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=C0",
       "structure": {
         "state": "trend",
@@ -443,7 +425,7 @@
         "当前主力",
         "波动率"
       ],
-      "change_state": "left_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=CU0",
       "structure": {
         "state": "trend",
@@ -626,7 +608,7 @@
         "成交量",
         "持仓量"
       ],
-      "change_state": "left_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=I0",
       "structure": {
         "state": "trend",
@@ -771,7 +753,7 @@
         "持仓量",
         "波动率"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=IM0",
       "structure": {
         "state": "consolidation",
@@ -806,7 +788,7 @@
         "数据日期",
         "当前主力"
       ],
-      "change_state": "left_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=J0",
       "structure": {
         "state": "fuzzy",
@@ -904,7 +886,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=JM0",
       "structure": {
         "state": "trend",
@@ -1165,7 +1147,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=OI0",
       "structure": {
         "state": "trend",
@@ -1214,7 +1196,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=P0",
       "structure": {
         "state": "trend",
@@ -1352,7 +1334,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=RM0",
       "structure": {
         "state": "trend",
@@ -1640,7 +1622,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "left_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=ZN0",
       "structure": {
         "state": "trend",
