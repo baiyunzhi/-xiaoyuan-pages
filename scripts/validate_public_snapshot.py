@@ -10,6 +10,12 @@ FORBIDDEN = {"raw_bars", "bars", "open", "high", "low", "close", "settle", "volu
 SCHEMA = "xiaoyuan.market_screener.v3"
 SCHEMA_VERSION = "3.0"
 MIN_AVAILABLE = 34
+UPDATE_POLICY = {
+    "mode": "completed_daily_once",
+    "deadline_local": "23:30",
+    "timezone": "Asia/Shanghai",
+    "intraday_refresh": False,
+}
 
 
 def keys(value):
@@ -27,6 +33,7 @@ def validate(path: Path, *, check_age: bool = True) -> dict:
     assert data.get("schema") == SCHEMA
     assert data.get("schema_version") == SCHEMA_VERSION
     assert data.get("closed_only") is True
+    assert data.get("update_policy") == UPDATE_POLICY
     products = data.get("products")
     assert isinstance(products, list) and len(products) == 37
     prefixes = [row.get("prefix") for row in products]
