@@ -1,11 +1,17 @@
 {
   "schema": "xiaoyuan.market_screener.v3",
   "schema_version": "3.0",
-  "generated_at": "2026-08-14T23:58:17+08:00",
-  "last_success_at": "2026-08-14T23:58:17+08:00",
+  "generated_at": "2026-08-16T14:58:21+08:00",
+  "last_success_at": "2026-08-16T14:58:21+08:00",
   "as_of": "2026-08-14",
   "expected_as_of": "2026-08-14",
   "closed_only": true,
+  "update_policy": {
+    "mode": "completed_daily_once",
+    "deadline_local": "23:30",
+    "timezone": "Asia/Shanghai",
+    "intraday_refresh": false
+  },
   "data_mode": "derived_completed_daily_snapshot",
   "decision": "observe_only",
   "explanation_policy": "derived_labels_only_no_raw_market_data",
