@@ -1,10 +1,10 @@
 {
   "schema": "xiaoyuan.market_screener.v3",
   "schema_version": "3.0",
-  "generated_at": "2026-08-22T07:35:15+08:00",
-  "last_success_at": "2026-08-22T07:35:15+08:00",
-  "as_of": "2026-08-21",
-  "expected_as_of": "2026-08-21",
+  "generated_at": "2026-08-24T22:06:53+08:00",
+  "last_success_at": "2026-08-24T22:06:53+08:00",
+  "as_of": "2026-08-24",
+  "expected_as_of": "2026-08-24",
   "closed_only": true,
   "update_policy": {
     "mode": "completed_daily_once",
@@ -21,15 +21,34 @@
   "summary": {
     "products": 37,
     "available": 37,
-    "focus": 6,
-    "watch": 7,
+    "focus": 8,
+    "watch": 8,
     "unavailable": 0
   },
   "changes": {
-    "entered_watch": [],
-    "left_watch": [],
-    "entered_focus": [],
-    "left_focus": [],
+    "entered_watch": [
+      "C",
+      "CU",
+      "NI",
+      "PP",
+      "Y"
+    ],
+    "left_watch": [
+      "J",
+      "P",
+      "SN",
+      "ZN"
+    ],
+    "entered_focus": [
+      "AL",
+      "IM",
+      "P",
+      "TA"
+    ],
+    "left_focus": [
+      "HC",
+      "Y"
+    ],
     "previous_as_of": "2026-08-21"
   },
   "products": [
@@ -40,14 +59,15 @@
       "sector": "贵金属",
       "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 4,
+      "as_of": "2026-08-24",
+      "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
         "价格位置",
         "成交参与",
         "持仓参与",
-        "合约结构"
+        "合约结构",
+        "持仓结构"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -57,17 +77,18 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 58.82,
-      "final_score": 51.77,
+      "attention_score": 62.75,
+      "final_score": 55.22,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
       "evidence_labels": [
         "趋势初期",
+        "潜在突破",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、合约结构，进入优先核对范围。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、合约结构、持仓结构，进入优先核对范围。",
       "next_checks": [
         "数据日期",
         "当前主力",
@@ -87,33 +108,45 @@
       "name": "沪铝",
       "symbol": "AL2610",
       "sector": "有色金属",
-      "pool": "neutral",
+      "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 2,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "持仓参与",
+        "波动状态"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 39.58,
+      "final_score": 25.96,
+      "context_label": "整理早期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "模糊态不评分",
+        "潜在突破",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为整理早期；持仓参与、波动状态，进入优先核对范围。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "持仓量",
+        "波动率"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_focus",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=AL0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "consolidation",
+        "stage": "middle",
         "direction": "sideways"
       }
     },
@@ -124,7 +157,7 @@
       "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 2,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -139,8 +172,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 46.67,
-      "final_score": 16.42,
+      "attention_score": 42.22,
+      "final_score": 14.86,
       "context_label": "趋势末期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -172,13 +205,14 @@
       "sector": "贵金属",
       "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 4,
+      "as_of": "2026-08-24",
+      "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
         "价格位置",
         "成交参与",
         "持仓参与",
+        "波动状态",
         "合约结构"
       ],
       "evaluated_factors": [
@@ -189,8 +223,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 68.75,
-      "final_score": 60.5,
+      "attention_score": 70.83,
+      "final_score": 62.34,
       "context_label": "突破确认",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -200,7 +234,7 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为突破确认；价格位置、成交参与、持仓参与、合约结构，进入优先核对范围。",
+      "reason_text": "当前为突破确认；价格位置、成交参与、持仓参与、波动状态、合约结构，进入优先核对范围。",
       "next_checks": [
         "数据日期",
         "当前主力",
@@ -222,7 +256,7 @@
       "sector": "能源化工",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 5,
       "active_factors": [
@@ -235,8 +269,8 @@
         "波动状态",
         "合约结构"
       ],
-      "attention_score": 14.29,
-      "final_score": 3.15,
+      "attention_score": 9.52,
+      "final_score": 2.09,
       "context_label": "趋势末期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -264,33 +298,47 @@
       "name": "玉米",
       "symbol": "C2611",
       "sector": "农产品",
-      "pool": "neutral",
+      "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 64.71,
+      "final_score": 42.7,
+      "context_label": "趋势初中期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "模糊态不评分",
+        "趋势初期",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、波动状态，继续等待事实积累。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "价格位置",
+        "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=C0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "trend",
+        "stage": "early",
         "direction": "sideways"
       }
     },
@@ -301,7 +349,7 @@
       "sector": "农产品",
       "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -352,7 +400,7 @@
       "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -395,14 +443,16 @@
       "name": "沪铜",
       "symbol": "CU2610",
       "sector": "有色金属",
-      "pool": "neutral",
+      "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 2,
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
       "evaluated_dimensions": 6,
       "active_factors": [
+        "价格位置",
         "成交参与",
-        "持仓参与"
+        "持仓参与",
+        "合约结构"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -412,24 +462,25 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 41.18,
-      "final_score": 36.23,
+      "attention_score": 52.94,
+      "final_score": 46.59,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
       "evidence_labels": [
         "趋势初期",
+        "潜在突破",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、合约结构，继续等待事实积累。",
       "next_checks": [
         "数据日期",
         "当前主力",
-        "成交量",
-        "持仓量"
+        "价格位置",
+        "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=CU0",
       "structure": {
         "state": "trend",
@@ -444,7 +495,7 @@
       "sector": "能源化工",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -488,7 +539,7 @@
       "sector": "能源化工",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 5,
       "active_factors": [
@@ -530,13 +581,14 @@
       "name": "热卷",
       "symbol": "HC2610",
       "sector": "黑色系",
-      "pool": "focus",
+      "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 1,
+      "as_of": "2026-08-24",
+      "active_dimensions": 2,
       "evaluated_dimensions": 6,
       "active_factors": [
-        "波动状态"
+        "持仓参与",
+        "合约结构"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -546,25 +598,27 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 15.69,
-      "final_score": 12.47,
-      "context_label": "整理末期",
-      "confidence_band": "较完整",
+      "attention_score": 42.22,
+      "final_score": 14.86,
+      "context_label": "趋势末期",
+      "confidence_band": "基本完整",
       "period_relation": "中性",
       "evidence_labels": [
+        "趋势衰竭",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为整理末期；波动状态，进入优先核对范围。",
+      "reason_text": "当前为趋势末期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
         "当前主力",
-        "波动率"
+        "持仓量",
+        "当前主力与合约结构"
       ],
-      "change_state": "unchanged",
+      "change_state": "left_focus",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=HC0",
       "structure": {
-        "state": "consolidation",
+        "state": "trend",
         "stage": "late",
         "direction": "sideways"
       }
@@ -576,32 +630,44 @@
       "sector": "黑色系",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "持仓结构"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 56.86,
+      "final_score": 25.03,
+      "context_label": "趋势初中期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "潜在突破",
-        "模糊态不评分",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "成交量",
+        "持仓量"
       ],
       "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=I0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "trend",
+        "stage": "middle",
         "direction": "up"
       }
     },
@@ -612,31 +678,41 @@
       "sector": "金融期货",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 2,
+      "evaluated_dimensions": 4,
+      "active_factors": [
+        "价格位置",
+        "持仓参与"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态"
+      ],
+      "attention_score": 58.33,
+      "final_score": 20.54,
+      "context_label": "趋势末期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "模糊态不评分",
+        "趋势衰竭",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为趋势末期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "价格位置",
+        "持仓量"
       ],
       "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=IC0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "trend",
+        "stage": "late",
         "direction": "sideways"
       }
     },
@@ -647,12 +723,13 @@
       "sector": "金融期货",
       "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 2,
+      "as_of": "2026-08-24",
+      "active_dimensions": 3,
       "evaluated_dimensions": 4,
       "active_factors": [
         "成交参与",
-        "持仓参与"
+        "持仓参与",
+        "波动状态"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -660,18 +737,18 @@
         "持仓参与",
         "波动状态"
       ],
-      "attention_score": 52.78,
-      "final_score": 46.44,
+      "attention_score": 50.0,
+      "final_score": 44.0,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
       "evidence_labels": [
         "趋势初期",
-        "潜在突破",
+        "主力离场疑云",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；成交参与、持仓参与，继续等待事实积累。",
+      "reason_text": "当前为趋势初中期；成交参与、持仓参与、波动状态，继续等待事实积累。",
       "next_checks": [
         "数据日期",
         "当前主力",
@@ -693,7 +770,7 @@
       "sector": "金融期货",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 0,
       "evaluated_dimensions": 0,
       "active_factors": [],
@@ -727,33 +804,45 @@
       "name": "中证1000",
       "symbol": "IM2609",
       "sector": "金融期货",
-      "pool": "neutral",
+      "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
+      "evaluated_dimensions": 4,
+      "active_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态"
+      ],
+      "attention_score": 72.22,
+      "final_score": 63.56,
+      "context_label": "趋势初中期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "模糊态不评分",
+        "趋势初期",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、波动状态，进入优先核对范围。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "价格位置",
+        "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_focus",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=IM0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "trend",
+        "stage": "early",
         "direction": "sideways"
       }
     },
@@ -762,9 +851,9 @@
       "name": "焦炭",
       "symbol": "J2701",
       "sector": "黑色系",
-      "pool": "watch",
+      "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 3,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -781,7 +870,7 @@
         "持仓结构"
       ],
       "attention_score": 52.94,
-      "final_score": 41.93,
+      "final_score": 31.44,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "反向",
@@ -791,14 +880,14 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；成交参与、持仓参与、波动状态，继续等待事实积累。",
+      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
         "当前主力",
         "成交量",
         "持仓量"
       ],
-      "change_state": "unchanged",
+      "change_state": "left_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=J0",
       "structure": {
         "state": "trend",
@@ -813,7 +902,7 @@
       "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 4,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -862,7 +951,7 @@
       "sector": "黑色系",
       "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -880,8 +969,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 78.43,
-      "final_score": 51.77,
+      "attention_score": 82.35,
+      "final_score": 54.35,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -912,7 +1001,7 @@
       "sector": "能源化工",
       "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -962,31 +1051,44 @@
       "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 0,
-      "evaluated_dimensions": 0,
-      "active_factors": [],
-      "evaluated_factors": [],
-      "attention_score": 0.0,
-      "final_score": 0.0,
-      "context_label": "结构待确认",
-      "confidence_band": "未评分",
-      "period_relation": "未核对",
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 54.9,
+      "final_score": 24.16,
+      "context_label": "趋势初中期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
       "evidence_labels": [
-        "模糊态不评分",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
-        "当前主力"
+        "当前主力",
+        "成交量",
+        "持仓量"
       ],
       "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=LH0",
       "structure": {
-        "state": "fuzzy",
-        "stage": "unclear",
+        "state": "trend",
+        "stage": "middle",
         "direction": "sideways"
       }
     },
@@ -997,13 +1099,12 @@
       "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 3,
+      "as_of": "2026-08-24",
+      "active_dimensions": 2,
       "evaluated_dimensions": 6,
       "active_factors": [
         "成交参与",
-        "持仓参与",
-        "波动状态"
+        "持仓参与"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -1013,8 +1114,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 52.94,
-      "final_score": 34.94,
+      "attention_score": 41.18,
+      "final_score": 27.18,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1045,7 +1146,7 @@
       "sector": "能源化工",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -1087,15 +1188,15 @@
       "name": "沪镍",
       "symbol": "NI2610",
       "sector": "有色金属",
-      "pool": "neutral",
+      "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 3,
       "evaluated_dimensions": 6,
       "active_factors": [
-        "价格位置",
         "成交参与",
-        "持仓参与"
+        "持仓参与",
+        "合约结构"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -1112,18 +1213,17 @@
       "period_relation": "中性",
       "evidence_labels": [
         "趋势初期",
-        "潜在突破",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；成交参与、持仓参与、合约结构，继续等待事实积累。",
       "next_checks": [
         "数据日期",
         "当前主力",
-        "价格位置",
-        "成交量"
+        "成交量",
+        "持仓量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=NI0",
       "structure": {
         "state": "trend",
@@ -1138,7 +1238,7 @@
       "sector": "农产品",
       "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -1156,8 +1256,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 76.47,
-      "final_score": 50.47,
+      "attention_score": 78.43,
+      "final_score": 51.77,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1186,15 +1286,16 @@
       "name": "棕榈油",
       "symbol": "P2701",
       "sector": "农产品",
-      "pool": "watch",
+      "pool": "focus",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 4,
+      "as_of": "2026-08-24",
+      "active_dimensions": 5,
       "evaluated_dimensions": 6,
       "active_factors": [
         "价格位置",
         "成交参与",
         "持仓参与",
+        "波动状态",
         "持仓结构"
       ],
       "evaluated_factors": [
@@ -1205,8 +1306,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 56.86,
-      "final_score": 50.04,
+      "attention_score": 64.71,
+      "final_score": 56.94,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1215,14 +1316,14 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、持仓结构，继续等待事实积累。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、波动状态、持仓结构，进入优先核对范围。",
       "next_checks": [
         "数据日期",
         "当前主力",
         "价格位置",
         "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_focus",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=P0",
       "structure": {
         "state": "trend",
@@ -1235,12 +1336,13 @@
       "name": "聚丙烯",
       "symbol": "PP2701",
       "sector": "能源化工",
-      "pool": "neutral",
+      "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 2,
+      "as_of": "2026-08-24",
+      "active_dimensions": 3,
       "evaluated_dimensions": 6,
       "active_factors": [
+        "价格位置",
         "成交参与",
         "持仓参与"
       ],
@@ -1252,8 +1354,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 41.18,
-      "final_score": 36.23,
+      "attention_score": 52.94,
+      "final_score": 46.59,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1262,14 +1364,14 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与，继续等待事实积累。",
       "next_checks": [
         "数据日期",
         "当前主力",
-        "成交量",
-        "持仓量"
+        "价格位置",
+        "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=PP0",
       "structure": {
         "state": "trend",
@@ -1284,7 +1386,53 @@
       "sector": "黑色系",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
+      "active_dimensions": 1,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "持仓参与"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 33.33,
+      "final_score": 11.74,
+      "context_label": "趋势末期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
+      "evidence_labels": [
+        "趋势衰竭",
+        "主力离场疑云",
+        "板块共振",
+        "假信号警惕"
+      ],
+      "reason_text": "当前为趋势末期；横向比较后暂不优先。",
+      "next_checks": [
+        "数据日期",
+        "当前主力",
+        "持仓量"
+      ],
+      "change_state": "unchanged",
+      "market_url": "https://hedong-xiaoyuan.top/market/?code=RB0",
+      "structure": {
+        "state": "trend",
+        "stage": "late",
+        "direction": "sideways"
+      }
+    },
+    {
+      "prefix": "RM",
+      "name": "菜粕",
+      "symbol": "RM2611",
+      "sector": "农产品",
+      "pool": "neutral",
+      "availability_reason": "",
+      "as_of": "2026-08-24",
       "active_dimensions": 0,
       "evaluated_dimensions": 0,
       "active_factors": [],
@@ -1305,59 +1453,10 @@
         "当前主力"
       ],
       "change_state": "unchanged",
-      "market_url": "https://hedong-xiaoyuan.top/market/?code=RB0",
+      "market_url": "https://hedong-xiaoyuan.top/market/?code=RM0",
       "structure": {
         "state": "fuzzy",
         "stage": "unclear",
-        "direction": "sideways"
-      }
-    },
-    {
-      "prefix": "RM",
-      "name": "菜粕",
-      "symbol": "RM2611",
-      "sector": "农产品",
-      "pool": "neutral",
-      "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 4,
-      "evaluated_dimensions": 6,
-      "active_factors": [
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "持仓结构"
-      ],
-      "evaluated_factors": [
-        "价格位置",
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "合约结构",
-        "持仓结构"
-      ],
-      "attention_score": 56.86,
-      "final_score": 37.53,
-      "context_label": "趋势初中期",
-      "confidence_band": "基本完整",
-      "period_relation": "中性",
-      "evidence_labels": [
-        "趋势初期",
-        "板块共振",
-        "假信号警惕"
-      ],
-      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
-      "next_checks": [
-        "数据日期",
-        "当前主力",
-        "成交量",
-        "持仓量"
-      ],
-      "change_state": "unchanged",
-      "market_url": "https://hedong-xiaoyuan.top/market/?code=RM0",
-      "structure": {
-        "state": "trend",
-        "stage": "early",
         "direction": "sideways"
       }
     },
@@ -1368,7 +1467,7 @@
       "sector": "能源化工",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 1,
       "evaluated_dimensions": 5,
       "active_factors": [
@@ -1381,8 +1480,8 @@
         "波动状态",
         "合约结构"
       ],
-      "attention_score": 4.76,
-      "final_score": 1.04,
+      "attention_score": 9.52,
+      "final_score": 2.09,
       "context_label": "趋势末期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1409,107 +1508,9 @@
       "name": "沪锡",
       "symbol": "SN2610",
       "sector": "有色金属",
-      "pool": "watch",
-      "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 4,
-      "evaluated_dimensions": 6,
-      "active_factors": [
-        "成交参与",
-        "持仓参与",
-        "合约结构",
-        "持仓结构"
-      ],
-      "evaluated_factors": [
-        "价格位置",
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "合约结构",
-        "持仓结构"
-      ],
-      "attention_score": 56.86,
-      "final_score": 50.04,
-      "context_label": "趋势初中期",
-      "confidence_band": "基本完整",
-      "period_relation": "中性",
-      "evidence_labels": [
-        "趋势初期",
-        "板块共振",
-        "假信号警惕"
-      ],
-      "reason_text": "当前为趋势初中期；成交参与、持仓参与、合约结构、持仓结构，继续等待事实积累。",
-      "next_checks": [
-        "数据日期",
-        "当前主力",
-        "成交量",
-        "持仓量"
-      ],
-      "change_state": "unchanged",
-      "market_url": "https://hedong-xiaoyuan.top/market/?code=SN0",
-      "structure": {
-        "state": "trend",
-        "stage": "early",
-        "direction": "sideways"
-      }
-    },
-    {
-      "prefix": "SR",
-      "name": "白糖",
-      "symbol": "SR2701",
-      "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 5,
-      "evaluated_dimensions": 6,
-      "active_factors": [
-        "价格位置",
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "合约结构"
-      ],
-      "evaluated_factors": [
-        "价格位置",
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "合约结构",
-        "持仓结构"
-      ],
-      "attention_score": 72.55,
-      "final_score": 31.92,
-      "context_label": "趋势初中期",
-      "confidence_band": "基本完整",
-      "period_relation": "中性",
-      "evidence_labels": [
-        "板块共振",
-        "假信号警惕"
-      ],
-      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
-      "next_checks": [
-        "数据日期",
-        "当前主力",
-        "价格位置",
-        "成交量"
-      ],
-      "change_state": "unchanged",
-      "market_url": "https://hedong-xiaoyuan.top/market/?code=SR0",
-      "structure": {
-        "state": "trend",
-        "stage": "middle",
-        "direction": "sideways"
-      }
-    },
-    {
-      "prefix": "TA",
-      "name": "PTA",
-      "symbol": "TA2701",
-      "sector": "能源化工",
-      "pool": "neutral",
-      "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 0,
       "evaluated_dimensions": 0,
       "active_factors": [],
@@ -1530,8 +1531,8 @@
         "数据日期",
         "当前主力"
       ],
-      "change_state": "unchanged",
-      "market_url": "https://hedong-xiaoyuan.top/market/?code=TA0",
+      "change_state": "left_watch",
+      "market_url": "https://hedong-xiaoyuan.top/market/?code=SN0",
       "structure": {
         "state": "fuzzy",
         "stage": "unclear",
@@ -1539,13 +1540,13 @@
       }
     },
     {
-      "prefix": "V",
-      "name": "PVC",
-      "symbol": "V2701",
-      "sector": "能源化工",
+      "prefix": "SR",
+      "name": "白糖",
+      "symbol": "SR2701",
+      "sector": "农产品",
       "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 0,
       "evaluated_dimensions": 0,
       "active_factors": [],
@@ -1556,6 +1557,93 @@
       "confidence_band": "未评分",
       "period_relation": "未核对",
       "evidence_labels": [
+        "模糊态不评分",
+        "板块共振",
+        "假信号警惕"
+      ],
+      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
+      "next_checks": [
+        "数据日期",
+        "当前主力"
+      ],
+      "change_state": "unchanged",
+      "market_url": "https://hedong-xiaoyuan.top/market/?code=SR0",
+      "structure": {
+        "state": "fuzzy",
+        "stage": "unclear",
+        "direction": "sideways"
+      }
+    },
+    {
+      "prefix": "TA",
+      "name": "PTA",
+      "symbol": "TA2701",
+      "sector": "能源化工",
+      "pool": "focus",
+      "availability_reason": "",
+      "as_of": "2026-08-24",
+      "active_dimensions": 6,
+      "evaluated_dimensions": 6,
+      "active_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "evaluated_factors": [
+        "价格位置",
+        "成交参与",
+        "持仓参与",
+        "波动状态",
+        "合约结构",
+        "持仓结构"
+      ],
+      "attention_score": 70.59,
+      "final_score": 62.12,
+      "context_label": "趋势初中期",
+      "confidence_band": "基本完整",
+      "period_relation": "中性",
+      "evidence_labels": [
+        "趋势初期",
+        "板块共振",
+        "假信号警惕"
+      ],
+      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、波动状态、合约结构、持仓结构，进入优先核对范围。",
+      "next_checks": [
+        "数据日期",
+        "当前主力",
+        "价格位置",
+        "成交量"
+      ],
+      "change_state": "entered_focus",
+      "market_url": "https://hedong-xiaoyuan.top/market/?code=TA0",
+      "structure": {
+        "state": "trend",
+        "stage": "early",
+        "direction": "sideways"
+      }
+    },
+    {
+      "prefix": "V",
+      "name": "PVC",
+      "symbol": "V2701",
+      "sector": "能源化工",
+      "pool": "neutral",
+      "availability_reason": "",
+      "as_of": "2026-08-24",
+      "active_dimensions": 0,
+      "evaluated_dimensions": 0,
+      "active_factors": [],
+      "evaluated_factors": [],
+      "attention_score": 0.0,
+      "final_score": 0.0,
+      "context_label": "结构待确认",
+      "confidence_band": "未评分",
+      "period_relation": "未核对",
+      "evidence_labels": [
+        "潜在突破",
         "模糊态不评分",
         "板块共振",
         "假信号警惕"
@@ -1578,9 +1666,9 @@
       "name": "豆油",
       "symbol": "Y2701",
       "sector": "农产品",
-      "pool": "focus",
+      "pool": "watch",
       "availability_reason": "",
-      "as_of": "2026-08-21",
+      "as_of": "2026-08-24",
       "active_dimensions": 4,
       "evaluated_dimensions": 6,
       "active_factors": [
@@ -1597,8 +1685,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 64.58,
-      "final_score": 56.84,
+      "attention_score": 66.67,
+      "final_score": 44.0,
       "context_label": "突破确认",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1608,14 +1696,14 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为突破确认；价格位置、成交参与、持仓参与、波动状态，进入优先核对范围。",
+      "reason_text": "当前为突破确认；价格位置、成交参与、持仓参与、波动状态，继续等待事实积累。",
       "next_checks": [
         "数据日期",
         "当前主力",
         "价格位置",
         "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "entered_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=Y0",
       "structure": {
         "state": "trend",
@@ -1628,17 +1716,16 @@
       "name": "沪锌",
       "symbol": "ZN2610",
       "sector": "有色金属",
-      "pool": "watch",
+      "pool": "neutral",
       "availability_reason": "",
-      "as_of": "2026-08-21",
-      "active_dimensions": 5,
+      "as_of": "2026-08-24",
+      "active_dimensions": 4,
       "evaluated_dimensions": 6,
       "active_factors": [
         "价格位置",
         "成交参与",
         "持仓参与",
-        "波动状态",
-        "合约结构"
+        "波动状态"
       ],
       "evaluated_factors": [
         "价格位置",
@@ -1648,8 +1735,8 @@
         "合约结构",
         "持仓结构"
       ],
-      "attention_score": 72.55,
-      "final_score": 47.88,
+      "attention_score": 60.78,
+      "final_score": 40.12,
       "context_label": "趋势初中期",
       "confidence_band": "基本完整",
       "period_relation": "中性",
@@ -1658,14 +1745,14 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "当前为趋势初中期；价格位置、成交参与、持仓参与、波动状态、合约结构，继续等待事实积累。",
+      "reason_text": "当前为趋势初中期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
         "当前主力",
         "价格位置",
         "成交量"
       ],
-      "change_state": "unchanged",
+      "change_state": "left_watch",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=ZN0",
       "structure": {
         "state": "trend",
