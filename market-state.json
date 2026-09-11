@@ -1,8 +1,8 @@
 {
   "schema": "xiaoyuan.market_screener.v3",
   "schema_version": "3.0",
-  "generated_at": "2026-09-11T16:50:57+08:00",
-  "last_success_at": "2026-09-11T16:50:57+08:00",
+  "generated_at": "2026-09-11T22:20:34+08:00",
+  "last_success_at": "2026-09-11T22:20:34+08:00",
   "as_of": "2026-09-11",
   "expected_as_of": "2026-09-11",
   "closed_only": true,
@@ -17,42 +17,20 @@
   "explanation_policy": "derived_labels_only_no_raw_market_data",
   "source_status": "degraded",
   "identity_mode": "reuse_last_confirmed",
-  "update_status": "PARTIAL",
+  "update_status": "OK",
   "summary": {
     "products": 37,
-    "available": 35,
+    "available": 37,
     "focus": 8,
     "watch": 9,
-    "unavailable": 2
+    "unavailable": 0
   },
   "changes": {
-    "entered_watch": [
-      "AG",
-      "AP",
-      "HC",
-      "L",
-      "ZN"
-    ],
-    "left_watch": [
-      "IF",
-      "MA",
-      "TA",
-      "V"
-    ],
-    "entered_focus": [
-      "AU",
-      "IF",
-      "LH",
-      "MA",
-      "TA"
-    ],
-    "left_focus": [
-      "CU",
-      "IM",
-      "L",
-      "ZN"
-    ],
-    "previous_as_of": "2026-09-10"
+    "entered_watch": [],
+    "left_watch": [],
+    "entered_focus": [],
+    "left_focus": [],
+    "previous_as_of": "2026-09-11"
   },
   "products": [
     {
@@ -96,7 +74,7 @@
         "成交量",
         "持仓量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=AG0",
       "structure": {
         "state": "trend",
@@ -194,7 +172,7 @@
         "成交量",
         "持仓量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=AP0",
       "structure": {
         "state": "trend",
@@ -244,7 +222,7 @@
         "成交量",
         "持仓量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=AU0",
       "structure": {
         "state": "trend",
@@ -463,7 +441,7 @@
         "价格位置",
         "当前主力与合约结构"
       ],
-      "change_state": "left_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=CU0",
       "structure": {
         "state": "trend",
@@ -609,7 +587,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=HC0",
       "structure": {
         "state": "trend",
@@ -750,7 +728,7 @@
         "成交量",
         "持仓量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=IF0",
       "structure": {
         "state": "trend",
@@ -841,7 +819,7 @@
         "价格位置",
         "持仓量"
       ],
-      "change_state": "left_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=IM0",
       "structure": {
         "state": "trend",
@@ -901,39 +879,33 @@
       "name": "鸡蛋",
       "symbol": "JD2611",
       "sector": "农产品",
-      "pool": "unavailable",
-      "availability_reason": "最新完成日线停留在2026-09-10，本次结论已失效。",
-      "as_of": "2026-09-10",
+      "pool": "neutral",
+      "availability_reason": "",
+      "as_of": "2026-09-11",
       "active_dimensions": 0,
-      "evaluated_dimensions": 6,
+      "evaluated_dimensions": 0,
       "active_factors": [],
-      "evaluated_factors": [
-        "价格位置",
-        "成交参与",
-        "持仓参与",
-        "波动状态",
-        "合约结构",
-        "持仓结构"
-      ],
+      "evaluated_factors": [],
       "attention_score": 0.0,
       "final_score": 0.0,
-      "context_label": "趋势末期",
-      "confidence_band": "基本完整",
-      "period_relation": "中性",
+      "context_label": "结构待确认",
+      "confidence_band": "未评分",
+      "period_relation": "未核对",
       "evidence_labels": [
+        "模糊态不评分",
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "最新完成日线停留在2026-09-10，本次结论已失效。",
+      "reason_text": "当前为结构待确认；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
         "当前主力"
       ],
-      "change_state": "became_unavailable",
+      "change_state": "changed",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=JD0",
       "structure": {
-        "state": "trend",
-        "stage": "late",
+        "state": "fuzzy",
+        "stage": "unclear",
         "direction": "sideways"
       }
     },
@@ -1024,7 +996,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=L0",
       "structure": {
         "state": "trend",
@@ -1073,7 +1045,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=LH0",
       "structure": {
         "state": "trend",
@@ -1173,7 +1145,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=MA0",
       "structure": {
         "state": "trend",
@@ -1478,9 +1450,9 @@
       "name": "原油",
       "symbol": "SC2610",
       "sector": "能源化工",
-      "pool": "unavailable",
-      "availability_reason": "最新完成日线停留在2026-09-10，本次结论已失效。",
-      "as_of": "2026-09-10",
+      "pool": "neutral",
+      "availability_reason": "",
+      "as_of": "2026-09-11",
       "active_dimensions": 1,
       "evaluated_dimensions": 5,
       "active_factors": [
@@ -1503,13 +1475,13 @@
         "板块共振",
         "假信号警惕"
       ],
-      "reason_text": "最新完成日线停留在2026-09-10，本次结论已失效。",
+      "reason_text": "当前为趋势末期；横向比较后暂不优先。",
       "next_checks": [
         "数据日期",
         "当前主力",
         "当前主力与合约结构"
       ],
-      "change_state": "became_unavailable",
+      "change_state": "changed",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=SC0",
       "structure": {
         "state": "trend",
@@ -1652,7 +1624,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_focus",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=TA0",
       "structure": {
         "state": "trend",
@@ -1697,7 +1669,7 @@
         "当前主力",
         "价格位置"
       ],
-      "change_state": "left_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=V0",
       "structure": {
         "state": "trend",
@@ -1794,7 +1766,7 @@
         "价格位置",
         "成交量"
       ],
-      "change_state": "entered_watch",
+      "change_state": "unchanged",
       "market_url": "https://hedong-xiaoyuan.top/market/?code=ZN0",
       "structure": {
         "state": "trend",
