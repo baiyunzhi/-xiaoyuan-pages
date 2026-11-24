@@ -1,0 +1,32 @@
+name: MNQ same-source connectivity probe
+on:
+  push:
+    branches: [ops/always-on-collection-20261124]
+    paths: [.github/workflows/mnq-connectivity-probe.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install curl_cffi==0.15.0
+      - name: Read public feed metadata only
+        run: |
+          python - <<'PY'
+          import json
+          from curl_cffi import requests
+          results=[]
+          for host in ('query1','query2'):
+              response=requests.get(f'https://{host}.finance.yahoo.com/v8/finance/chart/MNQ%3DF?range=7d&interval=1m',impersonate='chrome',timeout=25)
+              row={'host':host,'status':response.status_code}
+              if response.status_code==200:
+                  data=response.json()['chart']['result'][0]
+                  row.update(symbol=data['meta'].get('symbol'),timezone=data['meta'].get('exchangeTimezoneName'),bars=len(data.get('timestamp',[])),last_timestamp=data['timestamp'][-1])
+              results.append(row)
+          print(json.dumps(results))
+          assert any(row.get('symbol')=='MNQ=F' and row.get('timezone')=='America/New_York' and row.get('bars',0)>0 for row in results)
+          PY
