@@ -1,0 +1,6 @@
+{
+  "schema": "xiaoyuan.mnq.encrypted-packet.v1",
+  "captured_at": "2026-11-28T05:46:49.711208+00:00",
+  "ciphertext_sha256": "11fbab2c29d75892e221b71dfbae0f9cba4751b305055fc150265ba9929da534",
+  "ciphertext_bytes": 322837
+}
