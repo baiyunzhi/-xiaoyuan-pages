@@ -1,0 +1,32 @@
+name: Encrypted MNQ source packet
+on:
+  push:
+    branches: [main, ops/always-on-collection-20261124]
+    paths:
+      - .github/workflows/always-on-collection.yml
+      - collectors/mnq/**
+  schedule:
+    - cron: '35,50 7 * * *'
+    - cron: '5,20,35,50 8 * * *'
+    - cron: '5 9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mnq-source-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.repository == 'baiyunzhi/-xiaoyuan-pages' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ops/always-on-collection-20261124')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check curl_cffi==0.15.0
+      - name: Publish only the encrypted packet
+        run: python -B collectors/mnq/publish.py --repo . --certificate collectors/mnq/receiver.crt
